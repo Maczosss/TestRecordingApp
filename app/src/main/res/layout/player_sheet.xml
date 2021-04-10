@@ -71,8 +71,8 @@
 
     <ImageView
         android:id="@+id/player_play_button"
-        android:layout_width="66dp"
-        android:layout_height="71dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginTop="16dp"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,8 +82,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="25dp"
-        android:layout_height="30dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/player_play_button"
         app:layout_constraintEnd_toStartOf="@+id/player_play_button"
@@ -93,10 +93,10 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="25dp"
-        android:layout_height="30dp"
-        android:rotation="180"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:padding="16dp"
+        android:rotation="180"
         app:layout_constraintBottom_toBottomOf="@+id/player_play_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/player_play_button"
