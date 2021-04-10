@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,7 +16,10 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
 
     private NavController navController;
 
-    private ImageView listButton;
+    private ImageButton listButton;
+    private ImageButton recordButton;
+
+    private boolean isRecording = false;
 
     public  RecordFragment(){}
 
@@ -33,8 +36,10 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
 
         navController = Navigation.findNavController(view);
         listButton = view.findViewById(R.id.record_list_button);
+        recordButton = view.findViewById(R.id.record_button);
 
         listButton.setOnClickListener(this);
+        recordButton.setOnClickListener(this);
     }
 
     @Override
@@ -43,6 +48,17 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
             case R.id.record_list_button:
                 navController.navigate(R.id.action_recordFragment_to_audioListFragment);
                 break;
+            case R.id.record_button:
+                if(isRecording){
+                    //Stop recording
+                    recordButton.setImageDrawable(getResources().getDrawable(R.drawable.microphone_off, null));
+                    isRecording = false;
+                }
+                else {
+                    //Start Recording
+                    recordButton.setImageDrawable(getResources().getDrawable(R.drawable.microphone_on, null));
+                    isRecording = true;
+                }
         }
     }
 }
