@@ -111,6 +111,7 @@
         app:srcCompat="@drawable/forwa" />
 
     <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/player_seekBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
