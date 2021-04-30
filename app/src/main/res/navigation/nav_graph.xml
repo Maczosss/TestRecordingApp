@@ -3,7 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/recordFragment">
+    app:startDestination="@id/logInFragment">
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.saymyname.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_recordFragment"
+            app:destination="@id/recordFragment"
+            app:exitAnim="@anim/fade_out"
+            app:enterAnim="@anim/slide_in"
+            />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpSheet"
+            app:destination="@id/signUpSheet"
+            app:exitAnim="@anim/fade_out"
+            app:enterAnim="@anim/slide_in"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpSheet"
+        android:name="com.example.saymyname.LoginFragment"
+        android:label="signup_sheet"
+        tools:layout="@layout/signup_sheet" >
+        <action
+            android:id="@+id/action_signUpSheet_to_recordFragment"
+            app:destination="@id/recordFragment"
+            app:exitAnim="@anim/fade_out"
+            app:enterAnim="@anim/slide_in"
+            />
+    </fragment>
+
     <fragment
         android:id="@+id/recordFragment"
         android:name="com.example.saymyname.RecordFragment"
