@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -39,6 +38,8 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
         signUpButton = view.findViewById(R.id.sign_up_button);
         goToRecordFragmentButton = view.findViewById(R.id.test_purposes);
 
+        logInButton.setOnClickListener(this);
+        signUpButton.setOnClickListener(this);
         goToRecordFragmentButton.setOnClickListener(this);
     }
 
@@ -50,10 +51,12 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
                 navController.navigate(R.id.action_loginFragment_to_recordFragment);
                 break;
             case(R.id.login_button):
-                System.out.println("login");
+
+
+                //navController.navigate(R.id.action_loginFragment_to_loginPanel);
                 break;
             case(R.id.sign_up_button):
-                System.out.println("signup");
+                navController.navigate(R.id.action_loginFragment_to_signUpSheet);
                 break;
         }
     }
