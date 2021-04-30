@@ -6,7 +6,8 @@
     android:background="@drawable/player_bg"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
     app:behavior_hideable="true"
-    app:behavior_peekHeight="70dp">
+    app:behavior_peekHeight="70dp"
+    android:id="@+id/player_sheet">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -54,7 +55,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/player_fileName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -79,7 +80,7 @@
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/player_fileName"
         app:srcCompat="@drawable/play" />
 
     <ImageButton
@@ -110,6 +111,7 @@
         app:srcCompat="@drawable/forwa" />
 
     <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/player_seekBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
